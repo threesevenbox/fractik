@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Politique de Confidentialité — FRACTIK</title>
+  <title>Privacy Policy — FRACTIK</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
            max-width: 760px; margin: 0 auto; padding: 24px 20px;
@@ -27,8 +27,8 @@
 <body>
 
 <div class="lang-toggle">
-    <button onclick="setLang('en')">English</button>
-    <button class="active" onclick="setLang('fr')">Français</button>
+  <button class="active" onclick="setLang('en')">English</button>
+  <button onclick="setLang('fr')">Français</button>
 </div>
 
 <!-- ═══════════════════════════════ ENGLISH ════════════════════════════════ -->
@@ -136,7 +136,7 @@ The date of the last update is shown at the top of this page.</p>
 <a href="mailto:threesevenbox@gmail.com">threesevenbox@gmail.com</a></p>
 
 </div>
-  
+
 <!-- ═══════════════════════════════ FRANÇAIS ═══════════════════════════════ -->
 <div class="fr">
 
@@ -223,7 +223,7 @@ avec nos services.</p>
 <ul>
   <li><strong>Accès :</strong> consultez et effacez vos données locales depuis <em>Menu → Mes Données</em> dans l'app.</li>
   <li><strong>Effacement :</strong> bouton "Effacer les données locales" dans l'app, ou demande par e-mail.</li>
-  <li><strong>Portabilité :</strong> sur demande à <a href="threesevenbox@gmail.com">threesevenbox@gmail.com</a>.</li>
+  <li><strong>Portabilité :</strong> sur demande à <a href="mailto:threesevenbox@gmail.com">threesevenbox@gmail.com</a>.</li>
   <li><strong>Opposition :</strong> refusez le tracking publicitaire via les paramètres de consentement de l'app.</li>
   <li><strong>Réclamation :</strong> vous pouvez introduire une réclamation auprès de votre autorité
   nationale de protection des données (en France : <a href="https://www.cnil.fr" target="_blank">CNIL</a>).</li>
@@ -247,10 +247,9 @@ légales. La date de dernière mise à jour figure en haut de cette page.</p>
 
 <h2>11. Contact</h2>
 <p>Three Seven Box<br>
-<a href="threesevenbox@gmail.com">threesevenbox@gmail.com</a></p>
+<a href="mailto:threesevenbox@gmail.com">threesevenbox@gmail.com</a></p>
 
 </div>
-
 
 <footer>
   FRACTIK — Three Seven Box · <a href="mailto:threesevenbox@gmail.com">threesevenbox@gmail.com</a>
@@ -261,7 +260,7 @@ légales. La date de dernière mise à jour figure en haut de cette page.</p>
     document.querySelectorAll('.fr, .en').forEach(el => el.classList.remove('visible'));
     document.querySelector('.' + lang).classList.add('visible');
     document.querySelectorAll('.lang-toggle button').forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
+    event.currentTarget.classList.add('active');
   }
 </script>
 </body>
