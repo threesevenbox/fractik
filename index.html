@@ -1,25 +1,267 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de Confidentialité — FRACTIK</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            line-height: 1.6;
-        }
-        h1 { color: #ffffff; border-bottom: 1px solid #333; padding-bottom: 10px; }
-        p { color: #aaa; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politique de Confidentialité — FRACTIK</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+           max-width: 760px; margin: 0 auto; padding: 24px 20px;
+           color: #1a1a1a; line-height: 1.7; }
+    h1   { font-size: 1.6rem; border-bottom: 2px solid #000; padding-bottom: 8px; }
+    h2   { font-size: 1.1rem; margin-top: 2rem; }
+    table{ width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1rem 0; }
+    th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; }
+    th   { background: #f5f5f5; font-weight: 600; }
+    a    { color: #0066cc; }
+    .lang-toggle { display: flex; gap: 12px; margin-bottom: 24px; }
+    .lang-toggle button { border: 1px solid #ccc; background: #fff;
+                          padding: 4px 14px; border-radius: 20px; cursor: pointer; font-size: 0.9rem; }
+    .lang-toggle button.active { background: #000; color: #fff; border-color: #000; }
+    .fr, .en { display: none; }
+    .fr.visible, .en.visible { display: block; }
+    footer { margin-top: 3rem; font-size: 0.8rem; color: #888;
+             border-top: 1px solid #eee; padding-top: 16px; }
+  </style>
 </head>
 <body>
-    <h1>Politique de Confidentialité — FRACTIK</h1>
-    <p>Page en cours de mise à jour...</p>
+
+<div class="lang-toggle">
+  <button class="active" onclick="setLang('fr')">Français</button>
+  <button onclick="setLang('en')">English</button>
+</div>
+
+<!-- ═══════════════════════════════ FRANÇAIS ═══════════════════════════════ -->
+<div class="fr visible">
+
+<h1>Politique de Confidentialité — FRACTIK</h1>
+<p><strong>Dernière mise à jour :</strong> [DATE — ex : 1er juillet 2025]<br>
+<strong>Développeur :</strong> Three Seven Box<br>
+<strong>Contact :</strong> <a href="mailto:privacy@threesevenbox.com">privacy@threesevenbox.com</a></p>
+
+<h2>1. Présentation</h2>
+<p>FRACTIK est un jeu mobile développé par Three Seven Box. Cette politique de confidentialité
+décrit quelles données sont collectées lors de l'utilisation de l'application, pourquoi elles le sont,
+comment elles sont protégées et quels sont vos droits.</p>
+
+<h2>2. Données collectées</h2>
+<table>
+  <tr><th>Donnée</th><th>Finalité</th><th>Tiers impliqué</th><th>Durée de conservation</th></tr>
+  <tr>
+    <td>Identifiant publicitaire (IDFA sur iOS / GAID sur Android)</td>
+    <td>Affichage de publicités personnalisées</td>
+    <td>Google AdMob</td>
+    <td>Jusqu'à révocation du consentement</td>
+  </tr>
+  <tr>
+    <td>Données analytiques (type d'événements de jeu, durée de session, modèle d'appareil, version OS)</td>
+    <td>Amélioration de l'expérience et des performances</td>
+    <td>Firebase Analytics (Google)</td>
+    <td>14 mois (paramètre par défaut Firebase)</td>
+  </tr>
+  <tr>
+    <td>Rapports de crash (modèle d'appareil, version OS, version de l'app)</td>
+    <td>Stabilité et correction de bugs</td>
+    <td>Firebase / Firestore (Google) — données dans notre base uniquement</td>
+    <td>90 jours maximum, puis suppression automatique</td>
+  </tr>
+  <tr>
+    <td>Jeton d'intégrité App Check</td>
+    <td>Vérification que l'app est officielle (anti-modification)</td>
+    <td>Firebase App Check (Google)</td>
+    <td>Éphémère — non persisté</td>
+  </tr>
+  <tr>
+    <td>Profil de jeu (identifiant joueur, scores, succès)</td>
+    <td>Fonctionnalité de progression et classements</td>
+    <td>Google Play Jeux (Android) / Apple Game Center (iOS)</td>
+    <td>Selon la politique de confidentialité de Google ou Apple</td>
+  </tr>
+  <tr>
+    <td>Préférences locales (langue, son)</td>
+    <td>Personnalisation de l'interface</td>
+    <td>Aucun — stockage local sur l'appareil uniquement</td>
+    <td>Jusqu'à désinstallation ou effacement manuel</td>
+  </tr>
+</table>
+
+<h2>3. Authentification et comptes</h2>
+<p>FRACTIK ne dispose d'aucun système de création de compte interne (pas d'inscription par e-mail
+ni de mot de passe). L'authentification est assurée exclusivement par <strong>Google Play Jeux</strong>
+(Android) ou <strong>Apple Game Center</strong> (iOS). La gestion de ces comptes et des données
+associées relève des politiques de Google et Apple, accessibles ci-dessous.</p>
+
+<h2>4. Publicités</h2>
+<p>FRACTIK affiche des publicités fournies par <strong>Google AdMob</strong>.</p>
+<ul>
+  <li><strong>iOS :</strong> nous vous demandons votre autorisation via la fenêtre App Tracking Transparency
+  avant d'utiliser votre identifiant publicitaire. Vous pouvez modifier ce choix à tout moment
+  dans Réglages → Confidentialité → Suivi.</li>
+  <li><strong>Android (Union européenne) :</strong> un formulaire de consentement RGPD vous est présenté
+  au premier lancement. Vous pouvez modifier vos préférences à tout moment.</li>
+  <li>Si vous refusez le tracking, des publicités non personnalisées (contextuelles) sont affichées.
+  L'application reste entièrement fonctionnelle.</li>
+</ul>
+
+<h2>5. Partage des données</h2>
+<p>Nous ne vendons jamais vos données personnelles. Les données sont partagées uniquement avec les
+tiers listés dans le tableau ci-dessus dans le cadre strict de leur finalité déclarée.</p>
+
+<h2>6. Sécurité</h2>
+<p>Toutes les communications avec nos serveurs sont chiffrées via HTTPS. L'accès Firebase est
+protégé par Firebase App Check, qui garantit que seule l'application officielle peut interagir
+avec nos services.</p>
+
+<h2>7. Vos droits (RGPD — utilisateurs européens)</h2>
+<p>Si vous résidez dans l'Union européenne, vous disposez des droits suivants :</p>
+<ul>
+  <li><strong>Accès :</strong> consultez et effacez vos données locales depuis <em>Menu → Mes Données</em> dans l'app.</li>
+  <li><strong>Effacement :</strong> bouton "Effacer les données locales" dans l'app, ou demande par e-mail.</li>
+  <li><strong>Portabilité :</strong> sur demande à <a href="mailto:privacy@threesevenbox.com">privacy@threesevenbox.com</a>.</li>
+  <li><strong>Opposition :</strong> refusez le tracking publicitaire via les paramètres de consentement de l'app.</li>
+  <li><strong>Réclamation :</strong> vous pouvez introduire une réclamation auprès de votre autorité
+  nationale de protection des données (en France : <a href="https://www.cnil.fr" target="_blank">CNIL</a>).</li>
+</ul>
+
+<h2>8. Enfants</h2>
+<p>FRACTIK n'est pas destiné aux enfants de moins de 13 ans. Nous ne collectons pas sciemment
+de données personnelles concernant des mineurs. Si vous pensez qu'un enfant nous a fourni des
+données, contactez-nous à l'adresse ci-dessous.</p>
+
+<h2>9. Politiques des services tiers</h2>
+<ul>
+  <li><a href="https://policies.google.com/privacy" target="_blank">Politique de confidentialité Google</a> (Firebase, AdMob, Play Jeux)</li>
+  <li><a href="https://www.apple.com/legal/privacy/fr-ww/" target="_blank">Politique de confidentialité Apple</a> (Game Center)</li>
+  <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">Politique AdMob — Publicités</a></li>
+</ul>
+
+<h2>10. Modifications</h2>
+<p>Cette politique peut être mise à jour pour refléter l'évolution de l'application ou des obligations
+légales. La date de dernière mise à jour figure en haut de cette page.</p>
+
+<h2>11. Contact</h2>
+<p>Three Seven Box<br>
+<a href="mailto:privacy@threesevenbox.com">privacy@threesevenbox.com</a></p>
+
+</div>
+
+<!-- ═══════════════════════════════ ENGLISH ════════════════════════════════ -->
+<div class="en">
+
+<h1>Privacy Policy — FRACTIK</h1>
+<p><strong>Last updated:</strong> [DATE — e.g. July 1, 2025]<br>
+<strong>Developer:</strong> Three Seven Box<br>
+<strong>Contact:</strong> <a href="mailto:privacy@threesevenbox.com">privacy@threesevenbox.com</a></p>
+
+<h2>1. Overview</h2>
+<p>FRACTIK is a mobile game developed by Three Seven Box. This Privacy Policy describes what data
+is collected when you use the app, why it is collected, how it is protected, and what your rights are.</p>
+
+<h2>2. Data collected</h2>
+<table>
+  <tr><th>Data</th><th>Purpose</th><th>Third party</th><th>Retention</th></tr>
+  <tr>
+    <td>Advertising identifier (IDFA on iOS / GAID on Android)</td>
+    <td>Personalized advertising</td>
+    <td>Google AdMob</td>
+    <td>Until consent is withdrawn</td>
+  </tr>
+  <tr>
+    <td>Analytics data (game events, session duration, device model, OS version)</td>
+    <td>App improvement and performance</td>
+    <td>Firebase Analytics (Google)</td>
+    <td>14 months (Firebase default)</td>
+  </tr>
+  <tr>
+    <td>Crash reports (device model, OS version, app version)</td>
+    <td>Stability and bug fixing</td>
+    <td>Firebase / Firestore (Google) — stored in our own database</td>
+    <td>90 days maximum, then auto-deleted</td>
+  </tr>
+  <tr>
+    <td>App Check integrity token</td>
+    <td>Security — verifying the app is official</td>
+    <td>Firebase App Check (Google)</td>
+    <td>Ephemeral — not persisted</td>
+  </tr>
+  <tr>
+    <td>Game profile (player ID, scores, achievements)</td>
+    <td>Progression and leaderboard functionality</td>
+    <td>Google Play Games (Android) / Apple Game Center (iOS)</td>
+    <td>Per Google's or Apple's privacy policy</td>
+  </tr>
+  <tr>
+    <td>Local preferences (language, sound)</td>
+    <td>Interface personalization</td>
+    <td>None — stored locally on device only</td>
+    <td>Until uninstall or manual deletion</td>
+  </tr>
+</table>
+
+<h2>3. Authentication and accounts</h2>
+<p>FRACTIK has no internal account system (no email sign-up, no password). Authentication is provided
+exclusively by <strong>Google Play Games</strong> (Android) or <strong>Apple Game Center</strong> (iOS).
+The management of these accounts and their associated data falls under Google's and Apple's respective privacy policies.</p>
+
+<h2>4. Advertising</h2>
+<p>FRACTIK displays ads provided by <strong>Google AdMob</strong>.</p>
+<ul>
+  <li><strong>iOS:</strong> we request your permission via the App Tracking Transparency prompt before
+  using your advertising identifier. You can change this at any time in Settings → Privacy → Tracking.</li>
+  <li><strong>Android (European Union):</strong> a GDPR consent form is shown at first launch.
+  You can update your preferences at any time.</li>
+  <li>If you decline tracking, non-personalized (contextual) ads are shown. The app remains fully playable.</li>
+</ul>
+
+<h2>5. Data sharing</h2>
+<p>We never sell your personal data. Data is shared only with the third parties listed in the table above,
+strictly for their stated purpose.</p>
+
+<h2>6. Security</h2>
+<p>All communications with our servers are encrypted via HTTPS. Firebase access is protected by
+Firebase App Check, which ensures only the official app can interact with our services.</p>
+
+<h2>7. Your rights (GDPR — EU users)</h2>
+<ul>
+  <li><strong>Access:</strong> view and delete your local data from <em>Menu → My Data</em> in the app.</li>
+  <li><strong>Erasure:</strong> use the "Clear local data" button in the app, or send a request by email.</li>
+  <li><strong>Portability:</strong> available on request at <a href="mailto:privacy@threesevenbox.com">privacy@threesevenbox.com</a>.</li>
+  <li><strong>Objection:</strong> decline ad tracking via the app's consent settings.</li>
+  <li><strong>Complaint:</strong> you may lodge a complaint with your national data protection authority.</li>
+</ul>
+
+<h2>8. Children</h2>
+<p>FRACTIK is not directed at children under 13. We do not knowingly collect personal data from minors.
+If you believe a child has provided us with data, please contact us.</p>
+
+<h2>9. Third-party policies</h2>
+<ul>
+  <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a> (Firebase, AdMob, Play Games)</li>
+  <li><a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a> (Game Center)</li>
+  <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob Advertising Policy</a></li>
+</ul>
+
+<h2>10. Changes</h2>
+<p>This policy may be updated to reflect changes to the app or legal requirements.
+The date of the last update is shown at the top of this page.</p>
+
+<h2>11. Contact</h2>
+<p>Three Seven Box<br>
+<a href="mailto:privacy@threesevenbox.com">privacy@threesevenbox.com</a></p>
+
+</div>
+
+<footer>
+  FRACTIK — Three Seven Box · <a href="mailto:privacy@threesevenbox.com">privacy@threesevenbox.com</a>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.fr, .en').forEach(el => el.classList.remove('visible'));
+    document.querySelector('.' + lang).classList.add('visible');
+    document.querySelectorAll('.lang-toggle button').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+  }
+</script>
 </body>
 </html>
