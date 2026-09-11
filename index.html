@@ -27,8 +27,8 @@
 <body>
 
 <div class="lang-toggle">
-  <button class="active" onclick="setLang('en')">English</button>
-  <button onclick="setLang('fr')">Français</button>
+  <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+  <button id="btn-fr" onclick="setLang('fr')">Français</button>
 </div>
 
 <!-- ═══════════════════════════════ ENGLISH ════════════════════════════════ -->
@@ -259,8 +259,10 @@ légales. La date de dernière mise à jour figure en haut de cette page.</p>
   function setLang(lang) {
     document.querySelectorAll('.fr, .en').forEach(el => el.classList.remove('visible'));
     document.querySelector('.' + lang).classList.add('visible');
-    document.querySelectorAll('.lang-toggle button').forEach(btn => btn.classList.remove('active'));
-    event.currentTarget.classList.add('active');
+    
+    document.getElementById('btn-en').classList.remove('active');
+    document.getElementById('btn-fr').classList.remove('active');
+    document.getElementById('btn-' + lang).classList.add('active');
   }
 </script>
 </body>
